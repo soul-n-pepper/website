@@ -1,0 +1,1038 @@
+.masthead {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #2d2d2d 100%);
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top right;
+    z-index: -1;
+}
+
+.masthead-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .video-bg {
+        object-position: 70% top; /* Adjust horizontal position for tablets */
+    }
+    .masthead {
+        padding: 10rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-bg {
+        object-position: 80% top; /* Further adjust for phones */
+    }
+    .masthead {
+        padding: 8rem 0;
+    }
+    .masthead h1 {
+        font-size: 2rem;
+    }
+    .masthead h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ensure images and project boxes are of equal height */
+/* Ensure the project boxes adjust height based on their content */
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%; /* Ensure they fill at least the content's height */
+}
+
+.col-lg-6 img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain image aspect ratio */
+}
+
+.event-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.event-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.event-card.active .event-details {
+    max-height: 200px;
+}
+.privacy-icon {
+    float: right;
+}
+
+/* Navbar container adjustments */
+.navbar {
+    display: flex;
+    align-items: center;   /* Align the navbar items vertically in the middle */
+    padding: 0.5rem 0;     /* Adjust padding to fit nicely */
+    background-color: transparent;  /* Transparent to keep video visible */
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar brand/logo adjustments */
+.navbar-brand img {
+    height: 50px;         /* Set a fixed height to ensure proper alignment */
+    width: auto;          /* Keep aspect ratio intact */
+    margin-right: 20px;   /* Space between logo and nav links */
+}
+
+/* Navbar nav items adjustments */
+.navbar-nav {
+    display: flex;
+    gap: 20px;            /* Space between nav links */
+    align-items: center;  /* Ensure the links are vertically aligned */
+}
+
+.nav-link {
+    white-space: nowrap;  /* Prevent nav links from wrapping */
+    font-size: 1rem;      /* Adjust the font size as needed */
+    color: #df0806;       /* White color to contrast with the dark background */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fdb2c0;       /* Change color on hover for better interaction */
+}
+
+/* Navbar shrink on scroll */
+.navbar-shrink {
+    background-color: rgba(0, 0, 0, 0.8);  /* Add background color when scrolled down */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Media Query for Small Devices */
+@media (max-width: 992px) {
+    .navbar-brand img {
+        height: 40px;  /* Reduce logo size on smaller devices */
+    }
+}
+
+.bg-light {
+    background-color: #fdb2c0 !important; /* Set the background color to light gray */
+}
+
+.bg-dark {
+    background-color: #2d2d2d !important; /* Set the background color to dark gray */
+}
+
+.bg-black {
+    background-color: #2d2d2d !important; /* Set the background color to primary color */
+}
+
+.about-section {
+    background-color: #2d2d2d !important; /* Set the background color to primary color */
+    background:    linear-gradient(to bottom, #2d2d2d 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+#mainNav.navbar-shrink .nav-link.active {
+    color: #df0806; /* Set the color of the nav links */
+    border-bottom: 0.25rem solid #df0806;
+}
+#mainNav.navbar-shrink .nav-link:hover {
+    color: #df0806; /* Set the color of the nav links */
+    border-bottom: 0.25rem solid #df0806;
+}
+
+.btn {
+    background-color: #f1ee71;   /* Inside color */
+    border: 5px solid #df0806;   /* Outline color */
+    color: #df0806;              /* Text color to match the outline */
+    padding: 10px 20px;          /* Padding to make the button look good */
+    border-radius: 5px;          /* Optional: Add rounded corners */
+    font-weight: bold;           /* Make the text bold for better visibility */
+    cursor: pointer;             /* Change cursor to pointer to indicate it's clickable */
+    transition: all 0.3s ease;   /* Smooth transition for hover effects */
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #df0806;   /* Darker color on hover */
+    color: #f1ee71;              /* Text color swaps for contrast */
+}
+#mainNav.navbar-toggler {
+    color: #df0806;   /* Set the color of the toggler icon */
+}
+img {
+    width: 100%;
+    height: auto;
+    /*border-radius: 30px;*/
+}
+
+.member-card {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Ensure images and project boxes are of equal height and width */
+.img-col, .info-col {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    height: 300px; /* Set a fixed height */
+    width: 100%; /* Ensure columns take full width */
+}
+
+.img-col img {
+    width: 100%;
+    height: 100%; /* Stretch image to fill the height */
+    object-fit: cover; /* Ensures the image scales properly to fill the height */
+}
+
+
+
+.project {
+    height: 100%; /* Ensures the project info column fills the height */
+}
+.role-icon {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-right: 0.5rem; /* Space between the icon and the text */
+    color: #df0806; /* Adjust the color to make it more visible */
+}/* Additional Modern CSS to complement your existing styles */
+
+:root {
+    --primary-color: #df0806;
+    --secondary-color: #f1ee71;
+    --accent-color: #fdb2c0;
+    --dark-color: #2d2d2d;
+    --light-color: #f8f9fa;
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+  }
+  
+  /* Enhanced Event Cards */
+  .event-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .event-card h5 {
+    font-weight: 700;
+    color: var(--dark-color);
+  }
+  
+  .event-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .event-card.active .event-details {
+    max-height: 500px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  /* Location link styling */
+  .location-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .location-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  .location-link i {
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+  }
+  
+  /* Enhanced Navbar */
+  #mainNav {
+    transition: all 0.3s ease;
+  }
+  
+  #mainNav.navbar-shrink {
+    background-color: #fdb2c0;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link:hover::after {
+    width: 80%;
+  }
+  
+  /* Enhanced Buttons */
+  .btn-primary {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(223, 8, 6, 0.2);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(223, 8, 6, 0.3);
+  }
+  
+  /* Enhanced Section Headers */
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .section-header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Modern Band Member Cards */
+  .member-card {
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Modern Look for Instagram Section */
+  .instagram-feed {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+  }
+  
+  /* Footer Enhancements */
+  .social a {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+  }
+  
+  .social a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    color: white;
+  }
+  
+  /* Animation for page load */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  /* Privacy icon styling */
+  .privacy-icon {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .privacy-icon i {
+    margin-right: 0;
+  }
+  
+  /* Styling for public event icon */
+  .privacy-icon .fa-users {
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 0.4rem;
+    border-radius: 50%;
+  }
+  
+  /* Styling for private event icon */
+  .privacy-icon .fa-user-lock {
+    color: #fff;
+    background-color: #555;
+    padding: 0.4rem;
+    border-radius: 50%;
+  }
+  
+  /* Add some spacing in the events container */
+  #events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Enhanced icons in event cards */
+  .event-card i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+  }
+  
+  /* Responsive video container */
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* For better mobile experience */
+  @media (max-width: 767px) {
+    .member-card {
+      margin-bottom: 2rem;
+    }
+    
+    .section-header h1 {
+      font-size: 2rem;
+    }
+    
+    .section-header p {
+      font-size: 1rem;
+    }
+    
+    .btn-primary {
+      padding: 0.6rem 1.5rem;
+    }
+  }
+  /* Band Members Grid Styling */
+.band-member-card {
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    height: 380px; /* Increased fixed height for better proportions */
+}
+
+.band-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+.member-image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Square aspect ratio */
+}
+
+.member-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.band-member-card:hover .member-image {
+    transform: scale(1.05);
+}
+
+.member-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(45, 45, 45, 0.95) 0%, rgba(45, 45, 45, 0.7) 60%, transparent 100%);
+    padding: 20px;
+    color: white;
+    transform: translateY(calc(100% - 100px)); /* Show name and role initially */
+    transition: all 0.3s ease;
+    max-height: 100%;
+}
+
+.band-member-card:hover .member-overlay {
+    transform: translateY(0);
+}
+
+.member-details {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.member-details h4 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
+}
+
+.member-details p {
+    margin: 0;
+    color: #f1ee71;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+
+
+.role-icon i {
+    font-size: 1.5rem;
+    color: #df0806;
+}
+
+.band-member-card:hover .role-icon {
+    transform: translateY(-35px) rotate(360deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .col-lg-4 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-overlay {
+        transform: translateY(calc(100% - 80px));
+    }
+    
+    .role-icon {
+        transform: translateY(-25px);
+    }
+    
+    .band-member-card:hover .role-icon {
+        transform: translateY(-25px) rotate(360deg);
+    }
+}
+
+/* Animation for loading the members */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.band-member-card {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+    opacity: 0;
+}
+
+/* Events styling for Soul 'n Pepper website */
+
+/* Event cards styling */
+.event-card {
+    border: 2px solid #df0806;
+    background-color: white;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+}
+
+.event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.event-card.active {
+    background-color: #2d2d2d;
+}
+
+/* Event card header */
+.event-card h5 {
+    color: #2d2d2d;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Icons in event cards */
+.event-card i {
+    color: #df0806;
+    margin-right: 5px;
+}
+
+/* Privacy badge */
+.event-card .privacy-badge {
+    background-color: #f1ee71;
+    color: #2d2d2d;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Location link styling */
+.event-card .location-link {
+    color: #df0806;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.event-card .location-link:hover {
+    text-decoration: underline;
+}
+
+/* Event details section that expands/collapses */
+.event-card .event-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    background-color: #fdb2c0;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+}
+
+.event-card.active .event-details {
+    max-height: 300px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* Button styling */
+.event-card .btn-details {
+    background-color: #f1ee71;
+    border: 1px solid #df0806;
+    color: #2d2d2d;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.event-card .btn-details:hover {
+    background-color: #df0806;
+    color: #2d2d2d;
+}
+
+/* Toggle button text states */
+.event-card .btn-details .hide-text {
+    display: none;
+}
+
+.event-card.active .btn-details .show-text {
+    display: none;
+}
+
+.event-card.active .btn-details .hide-text {
+    display: inline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .event-card .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .event-card .privacy-badge {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+/* Events styling voor Soul 'n Pepper website */
+
+/* Event cards styling */
+.event-card {
+    border: 2px solid #df0806;
+    background-color: #2d2d2d;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+}
+
+.event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Event card header */
+.event-card h5 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Event card text */
+.event-card p {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+/* Icons in event cards */
+.event-card i {
+    color: #df0806;
+    margin-right: 5px;
+}
+
+/* Privacy badge */
+.event-card .privacy-badge {
+    background-color: #f1ee71;
+    color: #2d2d2d;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Location link styling */
+.event-card .location-link {
+    color: #fdb2c0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.event-card .location-link:hover {
+    text-decoration: underline;
+}
+
+/* Simple event details (no special styling) */
+.event-card p {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .event-card .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+   
+    .event-card .privacy-badge {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+/* Complete fix for band member cards on all screen sizes */
+
+/* Base styles for band member cards */
+.band-member-card {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    height: 380px; /* Fixed height for desktop */
+}
+
+.member-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fill the entire card */
+    overflow: hidden;
+}
+
+.member-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the entire container */
+    transition: all 0.5s ease;
+}
+
+/* Ensure overlay is ALWAYS visible regardless of screen size */
+.member-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(45, 45, 45, 0.95) 0%, rgba(45, 45, 45, 0.7) 60%, transparent 100%);
+    padding: 15px;
+    color: white;
+    transform: translateY(0) !important; /* Force always visible with !important */
+    transition: none; /* Disable transitions to prevent issues */
+    max-height: 100%;
+    height: auto;
+    min-height: 80px; /* Ensure minimum height for content */
+    z-index: 5; /* Ensure overlay is on top */
+}
+
+.member-details {
+    text-align: center;
+    padding-bottom: 10px;
+    opacity: 1 !important; /* Force visibility */
+}
+
+.member-details h4 {
+    margin: 5px 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.member-details p {
+    margin: 0;
+    color: #f1ee71;
+    font-size: 0.9rem;
+    opacity: 1 !important; /* Force visibility */
+    max-height: none; /* Allow full content display */
+    overflow: visible;
+}
+
+/* Override any hover effects */
+.band-member-card:hover .member-overlay {
+    transform: translateY(0) !important;
+}
+
+.band-member-card:hover .member-image {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments with stronger overrides */
+@media (max-width: 992px) {
+    .band-member-card {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .band-member-card {
+        height: 300px;
+    }
+    
+    .member-details h4 {
+        font-size: 1.1rem;
+    }
+    
+    .member-details p {
+        font-size: 0.85rem;
+    }
+    
+    .member-overlay {
+        min-height: 70px;
+    }    
+    .member-overlay {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: rgba(45, 45, 45, 0.9) !important; /* Solid background */
+        padding: 15px !important;
+        height: auto !important;
+        min-height: 80px !important;
+        z-index: 1000 !important; /* Very high z-index */
+        padding-bottom: 180px;
+    }    
+    .member-details {
+        text-align: center !important;
+        position: relative !important;
+        z-index: 1001 !important;
+        padding-bottom: 160px;
+    }
+}
+/* Specific fix for band members on single-column (very small) screens */
+
+/* Force visibility of member overlays on small screens where only 1 card fits per row */
+/* Enhanced fix for band member cards on very small screens */
+/* Complete overhaul for band member cards on small screens */
+
+/* First, reset any problematic styles that might be causing issues */
+@media (max-width: 576px) {
+    /* Reset any transform or transition effects that might be hiding content */
+    .member-overlay,
+    .band-member-card .member-overlay,
+    .band-member-card:hover .member-overlay,
+    .band-member-card.active .member-overlay {
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+        opacity: 1 !important;
+    }
+    
+    /* Directly target and force-show the member details and text */
+    .member-details,
+    .member-details h4,
+    .member-details p {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Add an inline !important style directly to the elements via JavaScript */
+    /* This will be added through a script we'll provide */
+}
+
+/* Nuclear option - completely rebuild the member card styles for small screens */
+@media (max-width: 576px) {
+    /* Container card styles */
+    .band-member-card {
+        position: relative !important;
+        height: 350px !important;
+        overflow: hidden !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Image container */
+    .member-image-container {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    /* Image styles */
+    .member-image {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* Text overlay - FULLY VISIBLE ALWAYS */
+    .member-overlay {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: rgba(45, 45, 45, 0.9) !important; /* Solid background */
+        padding: 15px !important;
+        height: auto !important;
+        min-height: 80px !important;
+        z-index: 1000 !important; /* Very high z-index */
+        padding-bottom: 180px;
+    }
+    
+    /* Text container */
+    .member-details {
+        text-align: center !important;
+        position: relative !important;
+        z-index: 1001 !important;
+        padding-bottom: 140px;
+    }
+    
+    /* Name text */
+    .member-details h4 {
+        color: #ffffff !important;
+        font-size: 1.2rem !important;
+        font-weight: bold !important;
+        margin: 0 0 5px 0 !important;
+        text-shadow: 1px 1px 3px #000000 !important;
+        z-index: 1002 !important;
+    }
+    
+    /* Role text */
+    .member-details p {
+        color: #f1ee71 !important;
+        font-size: 0.9rem !important;
+        margin: 0 !important;
+        z-index: 1002 !important;
+    }
+}
